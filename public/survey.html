@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	<!-- Font Awesome Glyphicons -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Noto Serif Font From Google -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700" rel="stylesheet">	
+	
+	<style>
+		body {
+			font-family: 'Noto Serif SC', serif !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron jumbotron-fluid">
+			<h1 class='display-4 text-center font-weight-bold'>Survey Questions</h1>
+		</div>
+		
+		<hr>
+		<form>
+			<div class="form-group">
+				<label for="firstName">Your Name</label>
+				<input type="text" class="form-control" id="firstName" placeholder="Enter your name">
+				<div id="no-name-entered" class="invisible text-danger">Please enter your name.</div>
+			</div>
+
+			<div class="form-group">
+				<label for="profilePic">Upload a Pic of Yourself</label>
+				<input type="file" class="form-control-file" id="profilePic" aria-describedby="profilePicHelp">
+				<small id="profilePicHelp" class="form-text text-muted">Optional.</small>
+			</div>
+
+			<h4>Question 1:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q1">For culinary reasons, tomatoes should be classified as a vegetable, not a fruit.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q1" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 2:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q2">Small as it may be, Pluto is still a planet.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q2" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 3:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q3">Housing prices are based on the rules of supply and demand.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q3" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 4:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q4">Electric scooters are a nice transportation option.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q4" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 5:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q5">BART should build a second transbay tube.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q5" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 6:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q6">President Trump has an inappropriate relationship with Putin.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q6" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 7:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q7">The egg is the perfect breakfast food.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q7" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 8:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q8">Coding is challenging and rewarding.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q8" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 9:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q9">Armed teachers are a poor substitute for reasonable gun reforms.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q9" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<h4>Question 10:</h4>
+			<div class="form-group">
+				<label class="my-1 mr-2" for="q10">Coffee is the best part of waking up.</label>
+				<select class="custom-select my-1 mr-sm-2" id="q10" required>
+					<option value="1">1 (strongly disagree)</option>
+					<option value="2">2 (disagree)</option>
+					<option value="3" selected>3 (neutral)</option>
+					<option value="4">4 (disagree)</option>
+					<option value="5">5 (strongly disagree)</option>
+				</select>
+			</div>
+
+			<div class="text-center">
+				<button type="submit" id="submit-form" class="btn btn-primary px-5 mx-auto">Submit</button>
+			</div>
+
+		</form>
+
+		<hr>
+		<footer class="footer">
+			<div class="container text-center">
+				<p><a href="/api/friends">View Friends via API</a></p>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Modal -->
+
+	<div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+					<h5 class="modal-title" id="match-modal-title">Your Closest Friend Match:</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h2 id="friend-name"></h2>
+				<img id="friend-img" src="" alt="Image of your match." style="max-width:100%">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="survey.js"></script>
+
+</body>
+</html>

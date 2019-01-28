@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "An app to find friends.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scotteratigan/friendfinder.git"
+  },
+  "keywords": [
+    "Adult",
+    "Friend",
+    "Finder"
+  ],
+  "author": "Scott Ratigan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scotteratigan/friendfinder/issues"
+  },
+  "homepage": "https://github.com/scotteratigan/friendfinder#readme"
+}
