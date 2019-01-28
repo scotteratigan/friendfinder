@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/scotteratigan/friendfinder/issues"
   },
-  "homepage": "https://github.com/scotteratigan/friendfinder#readme"
+  "homepage": "https://github.com/scotteratigan/friendfinder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
 }
